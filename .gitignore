@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-# Office Caches
+# Microsoft Office Caches
 ~*
 
 # C extensions
