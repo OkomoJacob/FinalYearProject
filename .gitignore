@@ -5,6 +5,9 @@ __pycache__/
 # Microsoft Office Caches
 ~*
 
+#Heavy Folders
+Videos/
+
 # C extensions
 *.so
 
