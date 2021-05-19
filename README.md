@@ -11,4 +11,4 @@ All resources and materials related to my Final Year BSc. Geospatial Information
 3.[Hanna's Tweet on MODIS NDVI TS](https://twitter.com/hannah_kerner/status/1286020895123869697)<br>
 4.[My Modis Time Series Animation](https://code.earthengine.google.com/f8e2399eb5852e06424c4046658857d7)<br>
 5.[USGS:Satellite Imagery Used to Measure Algal Bloom Frequency](https://www.usgs.gov/ecosystems/environmental-health-program/science/satellite-imagery-used-measure-algal-bloom-frequency?qt-science_center_objects=0#qt-science_center_objects)<br>
-6.
+6.[Centers for Disease Control and Prevention: HABs, Causes and Ecosystem Impacts](https://www.cdc.gov/habs/environment.html)
