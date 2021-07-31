@@ -7,7 +7,7 @@ __pycache__/
 
 # Heavy Folders
 Videos/
-
+images/INPUT RASTERS/
 
 # C extensions
 *.so
