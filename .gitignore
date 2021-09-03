@@ -8,6 +8,9 @@ __pycache__/
 # Heavy Folders
 Videos/
 images/INPUT RASTERS/
+RESULTS/LST
+RESULTS/Optical ERDAS
+RESULTS/opticalRasters
 
 # C extensions
 *.so
