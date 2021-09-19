@@ -79,7 +79,7 @@ The system sends JSON data to the cloud server in the following format:
   },
   "power_level": 85,
   "water_condition": "OK",
-  "timestamp": "2025-05-07 12:34:56 GMT"
+  "timestamp": "2021-05-07 12:34:56 GMT"
 }
 ```
 ## Limitations
