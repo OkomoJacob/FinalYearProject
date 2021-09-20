@@ -14,17 +14,14 @@ aoiRaster <- stack("2020_06_09_Lyr_Clip.tif")
 aoiRaster
 
 # Algorithm starts here
-# Chl-a=10^((0.2515-2.3798R+1.5823R^2-0.6372R^3+0.5692R^4))
-# Where R=log_10⁡〖(max⁡(Rrs(443,Rrs(490)))⁄Rrs(555) 〗 
-# R=log_10⁡〖((Rrs(443+Rrs(490),-Rrs(412)))⁄Rrs(555) 〗
+# R = log_10⁡〖((Rrs(443+Rrs(490),-Rrs(412)))⁄Rrs(555) 〗
+# 443 = Coastal,  490 = Blue, 555 = Green 412 = NULL, 
 
-# 490 = Blue, 555 = Green
-# ndvi <- (aoiRaster[[5]]-aoiRaster[[4]])/(aoiRaster[[5]]+aoiRaster[[4]])
-bg_Ratio = (aoiRaster[[2]]/aoiRaster[[3]])
+bg_Ratio = (aoiRaster[[1]]+aoiRaster[[2]])-((aoiRaster[[3]])/aoiRaster[[4]])
 R = log10(bg_Ratio)
 
-Chl_a = Chl_a = 10^((0.2515-2.3798*R+1.5823*R^2-0.6372*R^3+0.5692*R^4))
-plotRGB(aoiRaster, 4,3,2, scale = 65535, stretch = 'lin')
+Chl_a = 10^(0.2515-2.3798*R+1.5823*R^2-0.6372*R^3+0.5692*R^4)
+# plotRGB(aoiRaster, 4,3,2, scale = 65535, stretch = 'lin')
 plot(Chl_a,  main = "06_09_2020")
 aoiRaster[16]
 # Save file on disk
