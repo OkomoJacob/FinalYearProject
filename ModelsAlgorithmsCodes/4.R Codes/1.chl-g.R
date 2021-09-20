@@ -4,17 +4,21 @@ library(raster)
 library(rgdal)
 
 # import default proj dir and Check path contents
-path <- setwd("D:/STUDY/4.GIS/G I S 4.1/0.Project/RESULTS/opticalRasters")
+path <- setwd("D:/STUDY/4.GIS/G I S 4.2/0.Project/RESULTS/Optical ERDAS")
 path
 contents <- length(list.files(path))
 contents
 
 # Denote as Multiraster data
-lVictoria <- stack("feb2015Extract.tif")
-lVictoria
 
-# CIg = [(NIR / Green)-1]
-plotRGB(lVictoria, 4,3,2, scale = 65535, stretch = 'lin')
-clg <- (lVictoria[[4]]/lVictoria[[1]]-1)
-clg
-plot(clg,  main = "Non Bloom")
+aoiRaster <- stack()"L8NgaraAOI/NgaraAOI.tif"
+aoiRaster
+
+# Aalgorithm starts here
+plotRGB(aoiRaster, 4,3,2, scale = 65535, stretch = 'lin')
+ndvi <- (aoiRaster[[5]]-aoiRaster[[4]])/(aoiRaster[[5]]+aoiRaster[[4]])
+ndvi
+plot(ndvi,  main = "NGARA NDVI RAW")
+
+# Save file on disk
+saveFile <- writeRaster(ndvi, "ngaraNDVI.tiff", format = "GTiff", datatype = "FLT4S", overwrite = TRUE)
