@@ -4,24 +4,24 @@
 This project implements a real-time environmental monitoring system designed to detect Harmful Algal Blooms (HABs) in lake ecosystems. It collects data on Lake Surface Air Temperature (LSAT), salinity, GPS location, system power level and water condition, transmitting this data to a cloud server and sending SMS alerts when LSAT exceeds a predefined threshold.
 
 ### Features
- -[X] `Temperature Monitoring:` Measures LSAT using a DHT11 sensor.
- -[X] `GPS Tracking:` Captures location data with a Neo-6M GPS module.
- -[X] `Cloud Integration:` Sends data to a cloud server via HTTP POST requests.
- -[X] `SMS Alerts:` Uses Africa's Talking API to send alerts when LSAT indicates potential HAB conditions.
- -[X] `System Status:` Monitors power level and water condition with simulated values.
+ - [X] `Temperature Monitoring:` Measures LSAT using a DHT11 sensor.
+ - [X] `GPS Tracking:` Captures location data with a Neo-6M GPS module.
+ - [X] `Cloud Integration:` Sends data to a cloud server via HTTP POST requests.
+ - [X] `SMS Alerts:` Uses Africa's Talking API to send alerts when LSAT indicates potential HAB conditions.
+ - [X] `System Status:` Monitors power level and water condition with simulated values.
 
-## Hardware Requirements
+## Hardware Requirements 
 
- -[X] Raspberry Pi Model 3 B+
- -[X] DHT11 Sensor: For temperature and humidity measurements (connected to GPIO pin 4).
- -[X] Neo-6M GPS Module: For location data (connected to serial port /dev/ttyS0).
- -[X] Internet Connection: For cloud data transmission and SMS alerts.
- -[X] Power Supply: Stable power source for continuous operation.
+ - [X] Raspberry Pi Model 3 B+
+ - [X] DHT11 Sensor: For temperature and humidity measurements (connected to GPIO pin 4).
+ - [X] Neo-6M GPS Module: For location data (connected to serial port /dev/ttyS0).
+ - [X] Internet Connection: For cloud data transmission and SMS alerts.
+ - [X] Power Supply: Stable power source for continuous operation.
 
 ## Software Requirements
 
 Python 3.2+
-Libraries:
+### Libraries:
 
 `Adafruit_DHT:` For DHT11 sensor interfacing.
 `pynmea2:` For parsing GPS NMEA data.
@@ -67,7 +67,8 @@ Once powered, the system runs continuously, collecting data every 3600 seconds (
 Data is sent to the configured cloud server.
 If LSAT exceeds the threshold, an SMS alert is sent with temperature, salinity, location, and system status details, including a Google Maps link.
 
-Data Format
+### Data Format
+```json
 The system sends JSON data to the cloud server in the following format:
 {
   "lsat": 25.5,
@@ -80,8 +81,8 @@ The system sends JSON data to the cloud server in the following format:
   "water_condition": "OK",
   "timestamp": "2025-05-07 12:34:56 GMT"
 }
-
-Limitations
+```
+## Limitations
 
 Salinity Sensor: Currently a placeholder (NOT_SET). Integrate a real salinity sensor for complete functionality.
 Mock Cloud Server: The CLOUD_SERVER_URL is a placeholder. Replace with a real endpoint.
@@ -97,11 +98,11 @@ Commit your changes (git commit -m "Add your feature").
 Push to the branch (git push origin feature/your-feature).
 Open a pull request.
 
-License
+### License
 This project is licensed under the MIT License. See the LICENSE file for details.
-Acknowledgments
+### Acknowledgments
 
-Africa's Talking for SMS API services.
-Adafruit for DHT sensor libraries.
-The environmental science community for HAB research informing this project.
+- Africa's Talking for SMS API services.
+- Adafruit for DHT sensor libraries.
+- The environmental science community for HAB research informing this project.
 
