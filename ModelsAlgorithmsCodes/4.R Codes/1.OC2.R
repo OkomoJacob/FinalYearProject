@@ -10,7 +10,7 @@ contents <- length(list.files(path))
 contents
 
 # Denote as Multiraster data
-aoiRaster <- stack("2020_06_09_Lyr_Clip.tif")
+aoiRaster <- stack("2015_02_04_Clip.tif")
 aoiRaster
 
 # Algorithm starts here
@@ -23,7 +23,7 @@ R = log10(bg_Ratio)
 
 Chl_a = 10^((0.2511-2.0853*R + 1.5035*R^2-3.1747*R^3+0.3383*R^4))
 plotRGB(aoiRaster, 4,3,2, scale = 65535, stretch = 'lin')
-plot(Chl_a,  main = "06_09_2020")
+plot(Chl_a,  main = "04_02_2015")
 aoiRaster[16]
 # Save file on disk
-saveFile <- writeRaster(Chl_a, "06_09_2020.tiff", format = "GTiff", datatype = "FLT4S", overwrite = TRUE)
+saveFile <- writeRaster(Chl_a, "OC2_04_02_2015.tiff", format = "GTiff", datatype = "FLT4S", overwrite = TRUE)
