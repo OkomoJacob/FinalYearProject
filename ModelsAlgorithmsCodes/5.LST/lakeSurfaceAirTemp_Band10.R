@@ -17,6 +17,8 @@ aoiRaster <- stack("opticalRasters/2015_02_04_Clip.tif")
 Qcal <- stack("TIR Clips/2015_02_04.tif")
 ML <- 0.00033420
 AL <- 0.10000
+Lambda <- 10.8
+cTwo = 14388
 
 # Algorithm starts here
 ## 1. Calculate the TOA spectral Radiance
@@ -56,12 +58,7 @@ E = 0.004 * PV + 0.986
 #E should now range between 0.9986 to 0.99
 
 ## 6. Calculate the Land Surface Temperature-LST
-# LST = BT/(1+(Lambda*BT/c2)*Ln(E))
-# C2 = 14388um K
-# Lambda = 10.8 for L8 OLI_TIR
-# LST = (BT/(1+(10.8*BT/1.4388)*ln(E)))
-# LST for unclipped should be -125 to 22.5, 
-# When you clip out the study area, LST ranges from 9 to 20 deg celcius
+LST = (BT/(1+(Lambda*BT/cTwo)*log(E)))
 
 plot(E,  main = "2017_03_13")
 # Save file on disk
