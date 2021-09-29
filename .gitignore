@@ -11,6 +11,7 @@ images/INPUT RASTERS/
 RESULTS/LST
 RESULTS/Optical ERDAS
 RESULTS/opticalRasters
+RESULTS/TIR Clips
 
 # C extensions
 *.so
