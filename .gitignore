@@ -12,6 +12,7 @@ RESULTS/LST
 RESULTS/Optical ERDAS
 RESULTS/opticalRasters
 RESULTS/TIR Clips
+RESULTS/LSAT Final
 
 # C extensions
 *.so
