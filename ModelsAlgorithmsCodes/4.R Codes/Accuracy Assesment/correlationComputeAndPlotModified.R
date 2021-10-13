@@ -1,14 +1,15 @@
-#This script show show to compare two satellite images, from the same platform (in this case Sentinel-2)
-#YOu compare two bands, before processing and after processing
+#This script show to compare two satellite images, from the same platform (in this case Sentinel-2)
+#You compare two bands, before processing and after processing
 #The images have been preprocessed using QGIS Semi-automatic classification plugin,
 #From DN to TOA
 ##==========================================================================================##
-#Load libraries
+#Load installed libraries
 library(raster)
 library(rgdal)
 library(gdalUtils)
 library(RStoolbox)
 library(ggplot2)
+
 ##==========================================================================================##
 #Set the working directory containing hdf files
 #Working directory for this script is E:/PROPOSAL/201808_Report/Fusion-LC8 NDVI comparison
@@ -40,6 +41,7 @@ for (i in 1:length(s2_bands)) {
 #Sentinel-2 Band 2 preprocessing image
 s2b2_file_prepro <- list.files(path = getwd(), pattern = "S2_preprocessing_B02.tif")
 s2b2_img_prepro <- raster(s2b2_file_prepro)
+
 #Sentinel-2 Band 2 postprocessing image
 s2b2_file_postpro <- list.files(path = getwd(), pattern = "RT_L1C_T36MZE_A019437_20190313T080640_B02.tif")
 s2b2_img_postpro <- raster(s2b2_file_postpro)
