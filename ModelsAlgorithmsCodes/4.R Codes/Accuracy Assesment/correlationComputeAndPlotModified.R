@@ -72,6 +72,7 @@ p <- ggplot(df) +
   theme(plot.title = element_text(hjust = 0.5)) + 
   annotate("text", x = 2000, y = 0.4, label = label, size = 6, colour = "black", parse = TRUE)
 print(p)
+
 # Can also use --> p + annotate("text", x = 4, y = 25, label = "italic(R) ^ 2 == 0.75", parse = TRUE)
 #for annotation of correlation coefficient
 
