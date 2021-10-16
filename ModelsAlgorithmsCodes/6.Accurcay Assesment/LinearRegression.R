@@ -13,6 +13,15 @@ plot(data$L8.Chl.a.Estimates, data$S3.OLCI.Chl.a..Reference.)
 
 # Build the Prediction(Correlation Model)
 ## The model is : y = mx + c
-# Start by partitioning the data
+# Start by partitioning the data into train and test 
 
-randomNums1 = runif(100)
+randomNums1 = runif(60)
+
+# Index the radon numbers
+shuffle <- order(randomNums1)
+
+# Create training dataset with the first 20 records in the shuffle
+training <- data[shuffle[1:30],]
+
+# Test dataset
+test_ds = data[shulffle[21:30]]
