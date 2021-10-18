@@ -4,17 +4,14 @@ library(raster)
 library(rgdal)
 
 # import default proj dir and Check path contants
-path <- setwd("C:/Users/okomo/Desktop/Problematic Lady/R Codes")
+path <- setwd("D:/STUDY/4.GIS/G I S 4.2/0.Project/Marion/ClippedComposite")
 path <-getwd()
 path
 contents <- length(list.files(path))
 contents
 
-aoiRaster <- ".tif"
-aoiRaster
-
 # Denote as Multiraster data
-aoiRaster <-stack(aoiRaster)
+aoiRaster <- brick("L5Kitale2011_06.tif")
 aoiRaster
 
 # 1. NDVI = ((NIR-RED)/(NIR+RED))
