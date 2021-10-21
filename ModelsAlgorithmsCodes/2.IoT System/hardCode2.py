@@ -11,7 +11,7 @@ def send_sms():
     response = sms.send([
         "Air Temperature: 23.08 °C.\
         Water Salinity Condition: NOT_SET.\
-        Sensors Location: -1.094553, 37.01817. View Map: https://www.google.com/maps?q=-1.094553,37.01817.\
+        Sensors Location: -1.09392, 37.01833. View Map: https://www.google.com/maps?q=-1.09392,37.01833.\
         System Power Level: 77%.\
         Water conditions: OK!"
      ], recepients)
