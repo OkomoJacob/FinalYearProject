@@ -1,5 +1,5 @@
 
-'''1. LSAT Starts here'''
+'''1. LSAT Starts here, apparently the complete system is even faster'''
 import RPi.GPIO as GPIO
 import dht11
 import time
