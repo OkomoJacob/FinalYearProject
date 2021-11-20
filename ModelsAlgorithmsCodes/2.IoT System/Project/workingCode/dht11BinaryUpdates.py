@@ -4,7 +4,7 @@ import dht11
 import time
 import datetime
 
-# initialize GPIO
+# initialize GPIO 
 GPIO.setwarnings(True)
 GPIO.setmode(GPIO.BCM)
 
