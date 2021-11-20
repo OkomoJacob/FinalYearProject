@@ -2,6 +2,7 @@
 
 All resources and materials related to my Final Year BSc. Geospatial Information Science Undergraduate project
 
+1.[Automated Bulk Downloads of Landsat-8 Data Products in Python](http://geologyandpython.com/get-landsat-8.html)
 
 
 
