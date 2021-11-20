@@ -1,3 +1,4 @@
+
 '''1. LSAT Starts here'''
 import RPi.GPIO as GPIO
 import dht11
@@ -5,65 +6,41 @@ import time
 import datetime 
 import time #to delay your LED, LSAT collection timing
 
-#Set up your pins to use board numbering
-GPIO.setmode(GPIO.BOARD)
-GPIO.setwarnings(False)
-
-ledPin = 7 #Use pin 12(GPIO18)
-GPIO.setup(ledPin, GPIO.OUT)
-
 # initialize GPIO
-GPIO.setwarnings(True)
+GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
-# read data using GPIO pin 17
+ledPin = 4 #Use pin 7 (GPIO 4)
+GPIO.setup(ledPin, GPIO.OUT)
+
+# read dht11 data using GPIO pin 17
 instance = dht11.DHT11(pin=17)
+# The Real Guy
+print("Secure connection established")
+time.sleep(2.5)
 print("Connecting to GPS...")
-time.sleep(1)
-
+time.sleep(6)
+print("LSAT collection start...")
+#Flashing
+#while True: #Run forever
+     
 try:
-	while True:
-	    result = instance.read()
-	    if result.is_valid():
-	        print("Last valid input: " + str(datetime.datetime.now()))
-	        print("Temperature: %-3.1f C" % result.temperature)
-	        print("Humidity: %-3.1f %%" % result.humidity)
-
-	    time.sleep(6)
+    while True:
+        GPIO.output(ledPin, GPIO.HIGH)
+        time.sleep(0.25)
+        #  print("Going Off")
+        GPIO.output(ledPin, GPIO.LOW)
+        time.sleep(0.25)
+        
+        result = instance.read()
+        if result.is_valid():
+            print("Last valid input: " + str(datetime.datetime.now()))
+            print("LSAT: %-3.1f C\n" % result.temperature)
 
 except KeyboardInterrupt:
     print("Cleanup")
     GPIO.cleanup()
 
-
-'''
-2.System set to start working immediately on load
-'''
-# import RPi.GPIO as GPIO
-# import time #to delay your LED
-
-# #Set up your pins to use board numbering
-# GPIO.setmode(GPIO.BOARD)
-# GPIO.setwarnings(False)
-
-# ledPin = 7 #Use pin 12(GPIO18)
-# GPIO.setup(ledPin, GPIO.OUT)
-
-print("Secure connection established")
-time.sleep(2.5)
-print("Connecting GPS...")
-time.sleep(6)
-print("Data collection start...")
-#Flashing
-# while True: #Run forever
-def flash():
-    while True:
-        GPIO.output(ledPin, GPIO.HIGH)
-        time.sleep(0.25)
-          #  print("Going Off")
-        GPIO.output(ledPin, GPIO.LOW)
-        time.sleep(0.25)
-flash()
 
 """sendToUSSD"""
 
@@ -93,4 +70,3 @@ def send_alerts(alert_boolean_in_fn):
 
 # main meat execution    
 send_sms()
-
