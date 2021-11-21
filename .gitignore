@@ -11,6 +11,9 @@ Dr. E Nduati, Superviser/Submissions/ppt2E82.tmp
 *.RData
 *.Rhistory
 
+#IoT Test Environment
+ModelsAlgorithmsCodes/2.IoT System/Project/testEnv/
+
 # Heavy Folders
 Videos/
 images/INPUT RASTERS/
