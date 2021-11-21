@@ -1,4 +1,13 @@
-'''1. LSAT Starts here'''
+'''
+Complete IoT System:
+====================
+1.Collects Air Temp from DHT11
+2.Blinks LED to indicate functionality
+3.Populates excel ssheet with this data
+4.Send SMS in case of anormally
+lsat not defined in line 86 bugs me up, but just Ctr + S and reload code
+'''
+
 # !/usr/bin/env python
 # Import required libraries
 from openpyxl import load_workbook #To manipulate spreadsheet
