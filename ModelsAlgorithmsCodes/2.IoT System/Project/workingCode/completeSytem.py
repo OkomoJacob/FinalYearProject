@@ -47,7 +47,7 @@ try:
         def send_sms():
             sms = at.SMS
             response = sms.send([
-                "LSAT anormally detected! {}.format(lsat)°C.\
+                "LSAT anormally detected! f'{lsat}°C.\
                 LSAT at °C.\
                 Water Salinity Condition: NOT_SET.\
                 Sensors Location: -1.09392, 37.01833. View Map: https://www.google.com/maps?q=-1.09392,37.01833.\
