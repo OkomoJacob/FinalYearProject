@@ -1,7 +1,7 @@
 ## System Authentication
-username: pi
-IP Address: 192.168.43.220
-Password: spac*5
+username: pi <br>
+IP Address: 192.168.43.220 <br>
+Password: spac*5 <br>
 
 ## Problems
 1. [Raspi Green LED Blinks 4 times then goes off](https://forums.raspberrypi.com/viewtopic.php?t=272263)
