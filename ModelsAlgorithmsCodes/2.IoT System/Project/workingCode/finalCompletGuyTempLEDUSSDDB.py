@@ -83,7 +83,7 @@ try:
             print(response)
             
         # main meat execution    
-        if lsat == 28.6:
+        if result.temperature == 28.6:
             send_sms()    
 except KeyboardInterrupt:
     #Confirm save 
