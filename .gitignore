@@ -3,13 +3,14 @@ __pycache__/
 *.py[cod]
 *$py.class
 # Microsoft Office Caches
+*.DS_Store
 ~*
 
 # Templates and caches
 ModelsAlgorithmsCodes/4.R Codes/.RData
 Dr. E Nduati, Superviser/Submissions/ppt2E82.tmp
 *.RData
-*.Rhistory
+**.Rhistory
 
 #IoT Test Environment
 ModelsAlgorithmsCodes/2.IoT System/Project/testEnv/
