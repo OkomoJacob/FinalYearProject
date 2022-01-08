@@ -1,3 +1,10 @@
+'''
+This program runs only on a RaspberryPi Operating Sytem. You'll acquire the Pi Hardware to run the same
+Then install the required packages below.
+Then hook up the NeoUblox GPS sensors.
+Power the system at 5V then run the algorithms to get your live GPS location
+'''
+
 from signal import signal, SIGTERM, SIGHUP, pause
 import time 
 import pynmea2
