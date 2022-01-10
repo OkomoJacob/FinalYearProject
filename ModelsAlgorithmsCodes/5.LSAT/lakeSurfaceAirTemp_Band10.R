@@ -64,3 +64,4 @@ plot(E,  main = "2017_03_13")
 # Save file on disk
 saveFile <- writeRaster(Chl_a, "OC2_13_03_2017.tif", format = "GTiff", datatype = "FLT4S", overwrite = TRUE)
 
+
