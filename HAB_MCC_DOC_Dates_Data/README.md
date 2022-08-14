@@ -2,7 +2,7 @@
 
 This repository is dedicated for the data received from the Maritime monitoring authority.
 The entries include:
-- SET_DATE: Date when the data was collected
+- SET_DATE: Date when the data was collected, and or variable monitored.
 - LON_START: The Longitude associated with the data in World Geodetic System 1984, WGS 84
 - LAT_START: The Latitude  associated with the data in World Geodetic System 1984, WGS 84.
 - SPECIES: The Fish Species, in Scientific Nomencaluture under study associated with the environonmental conditions of that location.
