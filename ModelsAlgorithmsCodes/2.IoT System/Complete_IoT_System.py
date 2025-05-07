@@ -116,8 +116,8 @@ def main():
                           f"System Power Level: {power_level}%, Water conditions: {water_condition}")
                 send_sms_alert(message)
 
-        # Wait before next sample (e.g., every 60 seconds)
-        time.sleep(60)
+        # Wait 1 hour before next sample.
+        time.sleep(3660)
 
 if __name__ == "__main__":
     main()
